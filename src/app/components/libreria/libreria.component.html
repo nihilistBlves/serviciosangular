@@ -1,0 +1,19 @@
+<div class="row d-flex justify-content-center mt-3">
+    <div class="col-6 text-center">
+        <h1>LIBRERIA</h1>
+        <hr>
+        <h2>Comic</h2>
+        <hr>
+        <form #comicForm="ngForm" (ngSubmit)="crearComic()">
+            <label class="form-label">Titulo</label>
+            <input type="text" class="form-control" name="cajaTitulo" #cajaTitulo="ngModel" [(ngModel)]="comic.titulo">
+            <label class="form-label mt-3">Descripcion</label>
+            <input type="text" class="form-control" name="cajaDescripcion" #cajaDescripcion="ngModel" [(ngModel)]="comic.descripcion">
+            <label class="form-label mt-3">Imagen</label>
+            <input type="text" class="form-control"  name="cajaImagen" #cajaImagen="ngModel" [(ngModel)]="comic.imagen">
+            <button class="btn btn-success mt-3 form-control">Crear</button>
+        </form>
+        <hr>
+        <app-comic *ngFor="let comic of comics; index as i;" [comic]="comic" [index]="index" ></app-comic>
+    </div>
+</div>
