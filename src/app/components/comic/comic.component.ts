@@ -8,7 +8,6 @@ import { Comic } from 'src/app/models/comic';
 })
 export class ComicComponent implements OnInit {
   @Input() comic!: Comic;
-  @Input() index!: number;
   @Output() modificarComic = new EventEmitter();
 
   constructor() { }
