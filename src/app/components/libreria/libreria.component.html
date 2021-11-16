@@ -2,7 +2,8 @@
     <div class="col-6 text-center">
         <h1>LIBRERIA</h1>
         <hr>
-        <h2>Comic</h2>
+        <h2>Crear Comic</h2>
+        
         <hr>
         <form #comicForm="ngForm" (ngSubmit)="crearComic()">
             <label class="form-label">Titulo</label>
@@ -14,6 +15,19 @@
             <button class="btn btn-success mt-3 form-control">Crear</button>
         </form>
         <hr>
-        <app-comic *ngFor="let comic of comics; index as i;" [comic]="comic"></app-comic>
+        <h3>Favorito</h3>
+        <div class="col d-flex justify-content-center">
+            <div *ngIf="favorito" class="card" style="width: 18rem;background-color:lightseagreen;color: white;">
+                <img [src]="favorito.imagen" class="card-img-top" alt="..." height="200px">
+                <div class="card-body">
+                  <h5 class="card-title">{{favorito.titulo}}</h5>
+                  <p class="card-text">{{favorito.descripcion}}</p>
+                </div>
+            </div>
+            <h4 *ngIf="!favorito">No hay comic favorito</h4>
+        </div>
+        <hr>
+        <h2>LISTA COMICS</h2>
+        <app-comic *ngFor="let comic of comics; index as i;" [comic]="comic" [index]="i" (modificarComic)="modificarComicPadre($event)" (eliminarComic)="eliminarComicPadre($event)" (favoritoComic)="favoritoComicPadre($event)"></app-comic>
     </div>
 </div>

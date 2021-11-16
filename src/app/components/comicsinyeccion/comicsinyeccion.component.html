@@ -1,0 +1,13 @@
+<div class="row d-flex justify-content-center">
+    <div class="col-6 text-center">
+        <div *ngFor="let comic of comics">
+            <div class="card" style="width: 18rem;">
+                <img [src]="comic.imagen" class="card-img-top" alt="..." height="200px">
+                <div class="card-body">
+                  <h5 class="card-title">{{comic.titulo}}</h5>
+                  <p class="card-text">{{comic.descripcion}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

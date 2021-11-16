@@ -8,7 +8,10 @@ import { Comic } from 'src/app/models/comic';
 })
 export class ComicComponent implements OnInit {
   @Input() comic!: Comic;
+  @Input() index!: any;
   @Output() modificarComic = new EventEmitter();
+  @Output() eliminarComic = new EventEmitter();
+  @Output() favoritoComic = new EventEmitter();
 
   constructor() { }
 
@@ -16,7 +19,14 @@ export class ComicComponent implements OnInit {
   }
 
   modificarComicHijo(): void {
-    this.modificarComic.emit(this.comic);
+    this.modificarComic.emit(this.index);
+  }
+
+  eliminarComicHijo(): void {
+    this.eliminarComic.emit(this.index);
+  }
+  favoritoComicHijo(): void {
+    this.favoritoComic.emit(this.comic);
   }
 
 }

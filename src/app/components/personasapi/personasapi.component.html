@@ -1,0 +1,23 @@
+<div class="row d-flex justify-content-center mt-3">
+    <div class="col-6 text-center">
+        <h1>Personas api</h1>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Email</th>
+                    <th>Edad</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let persona of personas">
+                    <td>{{persona.IdPersona}}</td>
+                    <td>{{persona.Nombre}}</td>
+                    <td>{{persona.Email}}</td>
+                    <td>{{persona.Edad}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

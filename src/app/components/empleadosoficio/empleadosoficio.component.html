@@ -1,0 +1,36 @@
+<div class="row d-flex justify-content-center mt-3">
+    <div class="col-6 text-center">
+        <h1>Empleados por oficio</h1>
+        <form #formOficio="ngForm">
+            <div class="mb-3">
+                <label class="form-label">Seleccione un oficio:</label>
+                <select name="selectoficio" #selectoficio class="form-select">
+                    <option *ngFor="let oficio of oficios" [value]="oficio">
+                        {{oficio}}
+                    </option>
+                </select>
+            </div>
+            <button class="btn btn-primary" (click)="buscarPorOficio()">Mostrar empleados</button>
+        </form>
+        <table *ngIf="empleados" class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Apellido</th>
+                    <th>Oficio</th>
+                    <th>Salario</th>
+                    <th>Departamento</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let emp of empleados">
+                    <td>{{emp.idEmpleado}}</td>
+                    <td>{{emp.apellido}}</td>
+                    <td>{{emp.oficio}}</td>
+                    <td>{{emp.salario}}</td>
+                    <td>{{emp.departamento}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
