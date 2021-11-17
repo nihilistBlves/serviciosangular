@@ -1,0 +1,21 @@
+<div class="row d-flex justify-content-center mt-3">
+    <div class="col-6 text-center">
+        <h1>Listado de empleados</h1>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Apellido</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let emp of empleados">
+                    <td>{{emp.idEmpleado}}</td>
+                    <td>{{emp.apellido}}</td>
+                    <td><a [routerLink]="['/empleados', emp.idEmpleado]" class="btn btn-outline-success">Detalles</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

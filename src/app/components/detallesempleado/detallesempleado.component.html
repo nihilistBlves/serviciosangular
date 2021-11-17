@@ -1,0 +1,26 @@
+<div class="row d-flex justify-content-center mt-3">
+    <div class="col-6 text-center">
+        <h1>Detalles de empleado {{empleado.idEmpleado}}</h1>
+        <a [routerLink]="['/empleados']" class="btn btn-secondary">Volver</a>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Apellido</th>
+                    <th>Oficio</th>
+                    <th>Salario</th>
+                    <th>Departamento</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{empleado.idEmpleado}}</td>
+                    <td>{{empleado.apellido}}</td>
+                    <td>{{empleado.oficio}}</td>
+                    <td>{{empleado.salario}}</td>
+                    <td>{{empleado.departamento}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

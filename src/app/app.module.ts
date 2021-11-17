@@ -19,6 +19,8 @@ import { PersonasapiComponent } from './components/personasapi/personasapi.compo
 import { EmpleadossalarioComponent } from './components/empleadossalario/empleadossalario.component';
 import { EmpleadosoficioComponent } from './components/empleadosoficio/empleadosoficio.component';
 import { Empleado2Service } from './services/empleado2.service';
+import { ListadoempleadosComponent } from './components/listadoempleados/listadoempleados.component';
+import { DetallesempleadoComponent } from './components/detallesempleado/detallesempleado.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { Empleado2Service } from './services/empleado2.service';
     ComicsinyeccionComponent,
     PersonasapiComponent,
     EmpleadossalarioComponent,
-    EmpleadosoficioComponent
+    EmpleadosoficioComponent,
+    ListadoempleadosComponent,
+    DetallesempleadoComponent
   ],
   imports: [
     BrowserModule,
